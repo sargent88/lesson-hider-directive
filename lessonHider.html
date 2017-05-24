@@ -1,0 +1,7 @@
+<li>{{lesson}}</li>
+
+<button ng-click="dayAlert({ lesson: lesson, day: lessonDay })">Schedule</button>
+
+<input type="checkbox" ng-model="checkbox" ng-change="toggler()">Cross out<br>
+
+<button ng-click="remover({lesson: lesson})">Remove</button>

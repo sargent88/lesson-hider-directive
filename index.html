@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="directivePractice">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body ng-controller="lessonCtrl">
+    <h1>Adding some text</h1>
+    <!--<div>{{lessons}}</div>
+    <div>{{something}}</div>-->
+    <lesson-hider lesson="something"></lesson-hider>
+    <input ng-model="something">
+    <ul>
+        <lesson-hider ng-repeat="lesson in lessons" lesson="lesson" day-alert="announceDay(lesson, day)"></lesson-hider>
+    </ul>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js'></script>
+    <script src="app.js"></script>
+    <script src="./js/lessonCtrl.js"></script>
+    <script src="./js/lessonSrv.js"></script>
+    <script src="./js/lessonHider.js"></script>
+
+</body>
+
+</html>
